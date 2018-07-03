@@ -1,9 +1,9 @@
 # nextcloud-smbclient
 nextcloud docker-compose with smbclient build
 
-Base on nextcloud:fpm, for some reason smbclient pkg is not include, which not allow external smb share to be provided via nextcloud 
+Based on nextcloud:fpm, for some reason smbclient pkg is not include, which not allow external smb share to be provided via nextcloud 
 
-deploy: Any customisaztion will work nothing realy diffrent from origian docker-compose 
+deploy: Any customisaztion will work, no real diffrent from origian docker-compose  
 
 1. set sql db password
 

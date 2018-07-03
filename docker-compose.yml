@@ -6,7 +6,7 @@ services:
     # image: mysql
     restart: always
     volumes:
-      - db:/var/lib/mysql
+      - '/srv/nextcloud/db:/var/lib/mysql'
     environment:
       - MYSQL_ROOT_PASSWORD={MYSQL_ROOT_PWD}
     env_file:
@@ -16,7 +16,7 @@ services:
     build: ./app
     restart: always
     volumes:
-      - nextcloud:/var/www/html
+      - '/srv/nextcloud/nextcloud:/var/www/html'
     environment:
       - MYSQL_HOST=db
     env_file:
@@ -30,10 +30,6 @@ services:
     ports:
       - {MY_PUBLIC_IP_ADDRESS}:80:80
     volumes:
-      - nextcloud:/var/www/html:ro
+      - '/srv/nextcloud/nextcloud:/var/www/html:ro'
     depends_on:
       - app
-
-volumes:
-  db:
-  nextcloud:

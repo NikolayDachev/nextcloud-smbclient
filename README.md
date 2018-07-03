@@ -15,5 +15,8 @@ MYSQL_PASSWORD={NEXTCLOUD_USER_SQL_PASS}
 nextcloud-smbclient/docker-compose.yml
 - MYSQL_ROOT_PASSWORD={MYSQL_ROOT_PWD}
 
-3. run
+3. set public ip for nextcloud service
+ - {MY_PUBLIC_IP_ADDRESS}:80:80
+
+4. run
 docket-compose up -d
